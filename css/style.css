@@ -193,7 +193,7 @@ body h1 {
     align-items: left;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .grid-main__disks {
         display: flex;
         flex-direction: column;
@@ -208,7 +208,7 @@ body h1 {
         align-self: center;
         margin-left: 10px;
     }
-}
+} */
 
 
 /* End of Style for Spotify in discografía page*/
@@ -279,6 +279,7 @@ body h1 {
     color: var(--secondary);
 }
 
+
 @media only screen and (max-width: 768px) {
     .container__gallery-banneryt,
     .container-gallery {
@@ -289,7 +290,7 @@ body h1 {
         align-self: center;
         margin-left: 10px;
     }
-}
+} 
 
 
 
@@ -297,7 +298,28 @@ body h1 {
 
 
 /* Styles for Shows view */
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: fill;
+}
+.card {
+    max-width:max-content;
+    background-color: #000;
+    min-width: 100px;
+    min-height: 150px;
+    margin: auto;
+    border: 1px dashed var(--light);
 
+}
+.card-title {
+    color: #007bff;
+    font-weight: bold;
+}
+.card-text {
+    color: #007bff;
+    font-weight: bold;
+}
 .main__shows {
 display: grid;
 grid-template-rows: repeat(2, 1 fr);
@@ -306,7 +328,9 @@ grid-template-rows: repeat(2, 1 fr);
 .img--shows {
     height: 100%;
     width: 100%;
-    min-height: 750px;
+    min-height: 650px;
+    min-width: 300px;
+    padding-top: 120px;
     /* Create the parallax scrolling effect */
     background-position: center;
     background-size:100%;
