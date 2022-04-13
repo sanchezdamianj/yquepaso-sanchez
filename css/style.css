@@ -254,6 +254,8 @@ body h1 {
     display: flex;
     flex-basis: auto;
     flex-grow: 1;
+    animation-duration: 3s;
+    animation-name: slidelandimg;
 }
 
 .landing-media .band-name {
@@ -270,7 +272,24 @@ body h1 {
     text-transform: uppercase;
     font-size: 60px;
     flex-wrap: nowrap;
+    align-self: right;
 }
+
+ 
+@keyframes slidelandimg {
+    from {
+      margin-right: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-right: 0%;
+      width: 100%;
+    }
+  }
+
+
+
 .lead-text {
     display: flex;
     flex-direction: column;
@@ -289,8 +308,24 @@ body h1 {
     flex-grow: 1;
     width: 90%;
 
-}
+} 
 
+.lead-text p {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 @media only screen and (max-width: 768px) {
     .grid-main__home {
