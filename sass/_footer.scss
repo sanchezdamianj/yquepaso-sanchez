@@ -1,0 +1,30 @@
+    // Style for footer
+    footer {
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        min-height: 80px;
+        margin-top: 10px;
+        padding: 10px 0;
+        font: {
+            size: 16px;
+        }
+        background: {
+            color: $main-color;
+        }
+        word-spacing: .5rem;
+        text-align: center;
+    }
+    
+    footer {
+        ul {
+            li {
+                list-style: none;
+                font-size: 2rem;
+                display: inline-flex;
+            }
+        }
+    }
+    
+    // End of Style for footer

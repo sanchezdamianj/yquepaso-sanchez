@@ -1,0 +1,93 @@
+    // Partial for Header navbar
+    h1,
+    h2 {
+        padding-top: 40px;
+        margin-bottom: 0;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box: {
+            sizing: border-box;
+        }
+        font: {
+            family: 'roboto', sans-serif;
+            weight: 100;
+            weight: bold;
+        }
+        color: white;
+        letter-spacing: 0.6;
+    }
+    
+    // navbar from bootstrap
+    .navbar {
+        background-color: $main-color;
+        flex-wrap: wrap;
+        align-items: left;
+        &-collapse {
+            flex-grow: initial;
+        }
+        text: {
+            transform: uppercase;
+        }
+        &-collapse {
+            li:hover {
+                border-bottom: 2px solid $white;
+            }
+        }
+        &-brand {
+            text-transform: uppercase;
+        }
+        &-brand:hover {
+            border-bottom: 2px solid $white;
+        }
+        &-nav .nav-link {
+            margin: 0 10px;
+            font-size: 1.1rem;
+        }
+        &_style {
+            font: {
+                family: 'Montserrat', sans-serif;
+                size: 15px;
+            }
+            background-color: #0BB3D9;
+        }
+    }
+    
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    
+    // General Settings
+    a {
+        text-decoration: none;
+        background: {
+            color: transparent;
+        }
+    }
+    
+    body {
+        margin: 0;
+        background: #000;
+        line-height: 1.3;
+        color: rgba(255, 255, 255, 0.651);
+        min-height: 100vh;
+        padding-bottom: 40px;
+    }
+    
+    body {
+        h1 {
+            font-size: 40px;
+        }
+    }
