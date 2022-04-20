@@ -201,7 +201,6 @@ body h1 {
 .top-tracks {
     min-height: 650px;
     margin: auto;
-    align-self: center;
     position: relative;
     animation: movemusic 3s;
 }
@@ -216,13 +215,48 @@ body h1 {
 }
 
 .text-disks {
+    display: flex;
     font: bold;
     font-size: 24px;
-    text-align: center;
     text-transform: uppercase;
     height: 100%;
     letter-spacing: .1em;
     margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.border,
+.wave {
+    font-size: 5vmin;
+    position: absolute;
+}
+
+.border {
+    color: #000;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+
+.wave {
+    color: var(--main-color);
+    animation: wave 2s ease-in-out infinite;
+}
+
+.two {
+    display: flex;
+    margin: auto;
+    border-radius: 30px;
+    min-height: 120px;
+}
+
+@keyframes wave {
+    0%,
+    100% {
+        clip-path: polygon( 0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
 }
 
 

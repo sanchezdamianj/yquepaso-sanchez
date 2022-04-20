@@ -32,6 +32,11 @@
             transform: uppercase;
         }
         &-collapse {
+            li {
+                color: $white;
+            }
+        }
+        &-collapse {
             li:hover {
                 border-bottom: 2px solid $white;
             }
@@ -41,6 +46,7 @@
         }
         &-brand:hover {
             border-bottom: 2px solid $white;
+            color: $light;
         }
         &-nav .nav-link {
             margin: 0 10px;
