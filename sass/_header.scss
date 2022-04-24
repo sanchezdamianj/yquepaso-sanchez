@@ -39,6 +39,7 @@
         &-collapse {
             li:hover {
                 border-bottom: 2px solid $white;
+                transition: 0.2s;
             }
         }
         &-brand {
@@ -46,7 +47,7 @@
         }
         &-brand:hover {
             border-bottom: 2px solid $white;
-            color: $light;
+            transition: 0.2s;
         }
         &-nav .nav-link {
             margin: 0 10px;
@@ -55,7 +56,7 @@
         &_style {
             font: {
                 family: 'Montserrat', sans-serif;
-                size: 15px;
+                size: 16px;
             }
             background-color: #0BB3D9;
         }
@@ -94,6 +95,6 @@
     
     body {
         h1 {
-            font-size: 40px;
+            font-size: 30px;
         }
     }

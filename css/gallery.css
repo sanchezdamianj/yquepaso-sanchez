@@ -1,0 +1,125 @@
+.title {
+  font-weight: 300;
+  font-size: 50px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  opacity: initial;
+}
+
+.title-word {
+  -webkit-animation: colorAnimation 2s linear infinite;
+          animation: colorAnimation 2s linear infinite;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.container__gallery-banneryt {
+  min-height: 100vh;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  overflow-wrap: nowrap;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  gap: 30px;
+  padding: 10px 0 80px 0;
+}
+
+.container-gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.media {
+  min-height: 200px;
+  min-width: 300px;
+  font-weight: bold;
+  padding: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #fff;
+  -webkit-box-shadow: #e4e4c3;
+          box-shadow: #e4e4c3;
+  border-radius: 20px;
+}
+
+.media .text-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 16px;
+}
+
+.banner-yt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  overflow: hidden;
+  min-width: 200px;
+  min-height: 200px;
+  gap: 20px;
+}
+
+.banner-yt-iframe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px dashed grey;
+  border-radius: 40px;
+  height: 350px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container__gallery-banneryt,
+  .container-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content__gallery .navbar-brand {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .navbar-collapse {
+    width: 40%;
+  }
+  .container-fluid {
+    width: 65%;
+  }
+}
+/*# sourceMappingURL=gallery.css.map */
