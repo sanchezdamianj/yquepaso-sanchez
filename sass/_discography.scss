@@ -1,85 +1,109 @@
-.grid-main__disks {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: center;
-}
-
-.top-tracks {
-    min: {
-        height: 150px;
-    }
-    margin: auto;
-    align-self: center;
-    position: relative;
-    animation: movemusic 3s;
-}
-
-.title {
-    display: flex;
-    font: bold;
-    font-size: 20px;
+.hello {
+    position: absolute;
+    top: 100px;
+    left: 50%;
     text-transform: uppercase;
-    height: 100%;
-    letter-spacing: .1em;
-    margin: auto;
-    justify-content: space-around;
-}
-
-.disk {
-    margin: auto;
-    align-self: center;
-}
-
-@keyframes movemusic {
-    from {
-        right: 100%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    animation: {
+        name: wave;
+        iteration-count: infinite;
+        timing-function: ease-in-out;
     }
-    to {
-        right: 0%;
+}
+
+@for $i from 1 through 4 {
+    .hello:nth-of-type(#{$i}) {
+        animation-duration: 2s;
+        animation-delay: 0.9s - ($i / 4);
     }
 }
 
 @keyframes wave {
-    0% {
-        clip-path: polygon( 0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
-    }
-    100% {
-        clip-path: polygon( 0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    40% {
+        transform: translate(-50%, -65%) scale(1.025);
     }
     50% {
-        clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+        transform: translate(-50%, -65%) scale(1.025);
     }
+    0% {
+        transform: translate(-50%, -45%) scale(0.95);
+    }
+    90% {
+        transform: translate(-50%, -45%) scale(0.95);
+    }
+    100% {
+        transform: translate(-50%, -45%) scale(0.95);
+    }
+}
+
+.disk {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.body_style {
+    border-bottom: 1px dashed $green;
+    margin-top: 0;
 }
 
 .text-disks {
     display: flex;
-    font: bold;
-    font-size: 24px;
+    flex-grow: initial;
+    font-size: 30px;
     text-transform: uppercase;
     height: 100%;
     letter-spacing: .1em;
     margin: auto;
-    align-items: center;
     justify-content: center;
+    padding-top: 30px;
 }
 
-.border {
-    font-size: 5vmin;
-    position: absolute;
-    color: #000;
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+.leadisk {
+    text: {
+        align: left !important;
+        transform: uppercase;
+    }
+    animation: {
+        duration: 1s;
+        name: slideindisk;
+    }
+    letter-spacing: 1mm;
+    margin: {
+        left: 60px;
+        top: 20px;
+    }
 }
 
-.wave {
-    font-size: 5vmin;
-    position: absolute;
-    color: var(--main-color);
-    animation: wave 2s ease-in-out infinite;
+@keyframes slideindisk {
+    from {
+        margin: {
+            top: 100%;
+        }
+    }
+    to {
+        margin: {
+            top: 5%;
+        }
+    }
 }
 
-.two {
-    display: flex;
-    margin: auto;
-    border-radius: 30px;
-    min-height: 120px;
+@media screen and (min-width: 990px) {
+    .disk {
+        justify-content: left;
+    }
+    .text-disks {
+        justify-content: center;
+        font-size: 50px;
+    }
+    .leadisk {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hello {
+        font-size: 24px;
+    }
 }

@@ -1,0 +1,60 @@
+// Styles for Shows view 
+.title__shows {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: Monserrat, sanserif;
+}
+
+.bi-arrow-bar-down {
+    font-size: xx-large;
+}
+
+.shows {
+    margin: {
+        left: 300px;
+        right: 300px;
+    }
+}
+
+.card {
+    justify-content: center;
+    background-color: $secondary;
+    background-size: cover;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+    border: 2px solid $light;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    color: $info;
+    font-weight: bold;
+    border-bottom: 1px solid #f8f9fa;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .1em;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1250px) {
+    .list-group-horizontal-sm {
+        display: none;
+    }
+    .card-title {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .shows {
+        margin: {
+            left: 15px;
+            right: 15px;
+        }
+        .title__shows {
+            font-size: 30px;
+        }
+    }
+}

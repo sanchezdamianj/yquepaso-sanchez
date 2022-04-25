@@ -137,7 +137,7 @@ footer {
 }
 
 .wrapper i {
-  padding: 0 20px;
+  padding: 10px 20px 0 20px;
   margin-top: -20px;
 }
 
@@ -214,136 +214,181 @@ footer {
   }
 }
 
-.grid-main__disks {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.top-tracks {
-  min-height: 150px;
-  margin: auto;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  position: relative;
-  -webkit-animation: movemusic 3s;
-          animation: movemusic 3s;
-}
-
-.title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font: bold;
-  font-size: 20px;
+.hello {
+  position: absolute;
+  top: 100px;
+  left: 50%;
   text-transform: uppercase;
-  height: 100%;
-  letter-spacing: .1em;
-  margin: auto;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 50px;
+  -webkit-animation-name: wave;
+          animation-name: wave;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
-.disk {
-  margin: auto;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.hello:nth-of-type(1) {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.65s;
+          animation-delay: 0.65s;
 }
 
-@-webkit-keyframes movemusic {
-  from {
-    right: 100%;
-  }
-  to {
-    right: 0%;
-  }
+.hello:nth-of-type(2) {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
-@keyframes movemusic {
-  from {
-    right: 100%;
-  }
-  to {
-    right: 0%;
-  }
+.hello:nth-of-type(3) {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+.hello:nth-of-type(4) {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
 }
 
 @-webkit-keyframes wave {
-  0% {
-    -webkit-clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
-  }
-  100% {
-    -webkit-clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  40% {
+    -webkit-transform: translate(-50%, -65%) scale(1.025);
+            transform: translate(-50%, -65%) scale(1.025);
   }
   50% {
-    -webkit-clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    -webkit-transform: translate(-50%, -65%) scale(1.025);
+            transform: translate(-50%, -65%) scale(1.025);
+  }
+  0% {
+    -webkit-transform: translate(-50%, -45%) scale(0.95);
+            transform: translate(-50%, -45%) scale(0.95);
+  }
+  90% {
+    -webkit-transform: translate(-50%, -45%) scale(0.95);
+            transform: translate(-50%, -45%) scale(0.95);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -45%) scale(0.95);
+            transform: translate(-50%, -45%) scale(0.95);
   }
 }
 
 @keyframes wave {
-  0% {
-    -webkit-clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
-  }
-  100% {
-    -webkit-clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+  40% {
+    -webkit-transform: translate(-50%, -65%) scale(1.025);
+            transform: translate(-50%, -65%) scale(1.025);
   }
   50% {
-    -webkit-clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
-            clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    -webkit-transform: translate(-50%, -65%) scale(1.025);
+            transform: translate(-50%, -65%) scale(1.025);
   }
+  0% {
+    -webkit-transform: translate(-50%, -45%) scale(0.95);
+            transform: translate(-50%, -45%) scale(0.95);
+  }
+  90% {
+    -webkit-transform: translate(-50%, -45%) scale(0.95);
+            transform: translate(-50%, -45%) scale(0.95);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -45%) scale(0.95);
+            transform: translate(-50%, -45%) scale(0.95);
+  }
+}
+
+.disk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+}
+
+.body_style {
+  border-bottom: 1px dashed #28a745;
+  margin-top: 0;
 }
 
 .text-disks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font: bold;
-  font-size: 24px;
+  -webkit-box-flex: initial;
+      -ms-flex-positive: initial;
+          flex-grow: initial;
+  font-size: 30px;
   text-transform: uppercase;
   height: 100%;
   letter-spacing: .1em;
   margin: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 30px;
 }
 
-.border {
-  font-size: 5vmin;
-  position: absolute;
-  color: #000;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+.leadisk {
+  text-align: left !important;
+  text-transform: uppercase;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slideindisk;
+          animation-name: slideindisk;
+  letter-spacing: 1mm;
+  margin-left: 60px;
+  margin-top: 20px;
 }
 
-.wave {
-  font-size: 5vmin;
-  position: absolute;
-  color: var(--main-color);
-  -webkit-animation: wave 2s ease-in-out infinite;
-          animation: wave 2s ease-in-out infinite;
+@-webkit-keyframes slideindisk {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 5%;
+  }
 }
 
-.two {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
-  border-radius: 30px;
-  min-height: 120px;
+@keyframes slideindisk {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 5%;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .disk {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .text-disks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 50px;
+  }
+  .leadisk {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hello {
+    font-size: 24px;
+  }
 }
 
 .title {
@@ -528,6 +573,64 @@ footer {
   }
   .container-fluid {
     width: 65%;
+  }
+}
+
+.title__shows {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-family: Monserrat, sanserif;
+}
+
+.bi-arrow-bar-down {
+  font-size: xx-large;
+}
+
+.shows {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.card {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #6c757d;
+  background-size: cover;
+  overflow: hidden;
+  max-width: 100%;
+  margin: auto;
+  border: 2px solid #f8f9fa;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  color: #17a2b8;
+  font-weight: bold;
+  border-bottom: 1px solid #f8f9fa;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: .1em;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1250px) {
+  .list-group-horizontal-sm {
+    display: none;
+  }
+  .card-title {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .shows {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .shows .title__shows {
+    font-size: 30px;
   }
 }
 
