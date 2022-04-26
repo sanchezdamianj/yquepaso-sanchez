@@ -49,7 +49,7 @@
     
     .btn-thd {
         @extend %btn-primary;
-        background-color: map-get($bg-btn, greenB);
+        background-color: map-get($bg-btn, greenA);
     }
     
     .btn-fth {
