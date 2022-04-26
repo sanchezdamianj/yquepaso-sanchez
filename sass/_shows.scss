@@ -14,47 +14,45 @@
             left: 300px;
             right: 300px;
         }
-    }
-    
-    .card {
-        justify-content: center;
-        background-color: $secondary;
-        background-size: cover;
-        overflow: hidden;
-        max-width: 100%;
-        margin: auto;
-        @include bordered($white, solid, 2px);
-        border-radius: 20px;
-        margin-bottom: 20px;
-    }
-    
-    .card-title {
-        color: $info;
-        font-weight: bold;
-        border-bottom: 1px solid #f8f9fa;
-        font-size: 20px;
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: .1em;
+        .card {
+            justify-content: center;
+            background-color: $secondary;
+            background-size: cover;
+            overflow: hidden;
+            max-width: 100%;
+            margin: auto;
+            @include bordered($white, solid, 2px);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            .card-title {
+                color: $info;
+                font-weight: bold;
+                border-bottom: 1px solid #f8f9fa;
+                font-size: 20px;
+                text-transform: uppercase;
+                text-align: center;
+                letter-spacing: .1em;
+            }
+        }
     }
     
     %btn-primary {
         background-color: map-get($bg-btn, blue1);
     }
     
-    .btn-snd {
-        @extend %btn-primary;
-        background-color: map-get($bg-btn, blue2);
-    }
-    
-    .btn-thd {
-        @extend %btn-primary;
-        background-color: map-get($bg-btn, greenA);
-    }
-    
-    .btn-fth {
-        @extend %btn-primary;
-        background-color: map-get($bg-btn, greenA);
+    .btn {
+        &-snd {
+            @extend %btn-primary;
+            background-color: map-get($bg-btn, blue2);
+        }
+        &-thd {
+            @extend %btn-primary;
+            background-color: map-get($bg-btn, greenA);
+        }
+        &-fth {
+            @extend %btn-primary;
+            background-color: map-get($bg-btn, greenA);
+        }
     }
     
     @media only screen and (min-width: 768px) and (max-width: 1250px) {
