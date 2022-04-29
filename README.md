@@ -1,4 +1,4 @@
-# yquepaso-sanchez - Repositorio Y QUE PASO? web site utilizandos HTML5, CCS3, Framework bootstrap, SASS, JavaScrypt.
+# yquepaso-sanchez - Repositorio Y QUE PASO? web site utilizando HTML5, CCS3, Framework bootstrap, SASS, JavaScrypt.
 
 Hi 👋 My name is DAMIAN J SANCHEZ
 =================================
