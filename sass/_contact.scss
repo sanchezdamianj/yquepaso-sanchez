@@ -97,7 +97,7 @@
                         resize: none;
                     }
                     &::placeholder {
-                        font-size: 14px;
+                        font-size: 12px;
                     }
                 }
                 input[type=range] {
@@ -114,7 +114,7 @@
                 flex: 1;
                 display: flex;
                 padding: 10px;
-                min-width: 150px;
+                min-width: 120px;
                 img {
                     width: 100%;
                     margin: auto;
@@ -140,6 +140,11 @@
             }
             .flex-container {
                 width: 95%;
+                .form-img {
+                    img {
+                        width: 180px;
+                    }
+                }
             }
             .main__contact {
                 h1 {
